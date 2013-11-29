@@ -40,7 +40,7 @@ LOCAL_SRC_FILES := \
         $(sbrenc_sources:%=libSBRenc/src/%)
 
 LOCAL_CFLAGS := -DANDROID
-LOCAL_CFLAGS += -Wno-sequence-point -Wno-extra
+LOCAL_CFLAGS += -Wno-sequence-point -Wno-extra -Wno-sign-promo
 
 LOCAL_C_INCLUDES := \
         $(LOCAL_PATH)/libAACdec/include \
@@ -55,4 +55,5 @@ LOCAL_C_INCLUDES := \
 
 LOCAL_MODULE:= libFraunhoferAAC
 
+LOCAL_ARM_MODE := arm
 include $(BUILD_STATIC_LIBRARY)
